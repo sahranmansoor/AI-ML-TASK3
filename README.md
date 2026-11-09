@@ -12,7 +12,7 @@ A simple machine learning pipeline to predict housing prices using Ridge Regress
    *(This generates `Housing_processed.csv`)*
 
 2. **Train and evaluate the model:** 
-   Scales the features, trains a Ridge Regression model, and prints evaluation metrics.
+   Scales the features, trains a linear Regression model, and prints evaluation metrics.
    ```bash
    python main.py
    ```
