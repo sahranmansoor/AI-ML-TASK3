@@ -3,6 +3,11 @@ import pandas as pd
 def main():
     df = pd.read_csv("Housing.csv")
 
+    area_limit = df["area"].quantile(0.9)
+    price_limit = df["price"].quantile(0.9)
+    
+    df = df[(df["area"] <= area_limit) & (df["price"] <= price_limit)]
+
     df["furnishingstatus"] = df["furnishingstatus"].map({
         "furnished": 2,
         "semi-furnished": 1,
